@@ -12,33 +12,44 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Global Colors - Updated for Dark Mode */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --background-color: #121212;
+  /* Dark background for the entire website */
+  --default-color: #e0e0e0;
+  /* Light text color for readability */
+  --heading-color: #ffffff;
+  /* White for headings */
+  --accent-color: #bb86fc;
+  /* Purple accent color for buttons, links, etc. */
+  --surface-color: #1e1e1e;
+  /* Dark surface color for cards, boxes, etc. */
+  --contrast-color: #ffffff;
+  /* White for contrast against dark backgrounds */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+/* Nav Menu Colors - Updated for Dark Mode */
+:root {
+  --nav-color: #e0e0e0;
+  /* Light color for nav links */
+  --nav-hover-color: #bb86fc;
+  /* Purple for hover/active nav links */
+  --nav-mobile-background-color: #1e1e1e;
+  /* Dark background for mobile nav */
+  --nav-dropdown-background-color: #252525;
+  /* Dark background for dropdowns */
+  --nav-dropdown-color: #e0e0e0;
+  /* Light text for dropdown links */
+  --nav-dropdown-hover-color: #bb86fc;
+  /* Purple for hovered dropdown links */
+}
 
+/* Color Presets - Updated for Dark Mode */
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
@@ -152,8 +163,9 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #000000;
-  --default-color: #ffffff;
+  --background-color: #1e1e1e;
+  /* Darker background for header */
+  --default-color: #e0e0e0;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
