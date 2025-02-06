@@ -156,14 +156,20 @@
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
         filter: filter,
         sortBy: sort
       });
+
+      // 🔹 Force Isotope to recalculate the layout after a slight delay
+      setTimeout(() => {
+        initIsotope.layout();
+      }, 300);
     });
+
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
@@ -249,28 +255,3 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
-
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(function () {
-    let isoContainer = document.querySelector('.isotope-container');
-    if (isoContainer && window.Isotope) {
-      let iso = new Isotope(isoContainer, {
-        itemSelector: '.portfolio-item',
-        layoutMode: 'masonry'
-      });
-      iso.layout(); // Force re-layout after a delay
-    }
-  }, 300); // Small delay to ensure proper loading
-});
-
-
-window.addEventListener("resize", function () {
-  let isoContainer = document.querySelector('.isotope-container');
-  if (isoContainer && window.Isotope) {
-    let iso = new Isotope(isoContainer, {
-      itemSelector: '.portfolio-item',
-      layoutMode: 'masonry'
-    });
-    iso.layout(); // Recalculate layout when resizing
-  }
-});
