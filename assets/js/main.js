@@ -256,3 +256,7 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+console.log("Isotope initialized:", initIsotope);
+console.log("Isotope items count:", document.querySelectorAll('.isotope-item').length);
