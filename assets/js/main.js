@@ -262,3 +262,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 300); // Small delay to ensure proper loading
 });
+
+
+window.addEventListener("resize", function () {
+  let isoContainer = document.querySelector('.isotope-container');
+  if (isoContainer && window.Isotope) {
+    let iso = new Isotope(isoContainer, {
+      itemSelector: '.portfolio-item',
+      layoutMode: 'masonry'
+    });
+    iso.layout(); // Recalculate layout when resizing
+  }
+});
