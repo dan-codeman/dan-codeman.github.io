@@ -249,3 +249,16 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    let isoContainer = document.querySelector('.isotope-container');
+    if (isoContainer && window.Isotope) {
+      let iso = new Isotope(isoContainer, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'masonry'
+      });
+      iso.layout(); // Force re-layout after a delay
+    }
+  }, 300); // Small delay to ensure proper loading
+});
