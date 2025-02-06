@@ -160,12 +160,13 @@
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
-        filter: filter,
+        filter: "*", // Ensure all items are shown initially
         sortBy: sort
       });
 
       // 🔹 Force Isotope to recalculate the layout after a slight delay
       setTimeout(() => {
+        iso.arrange({ filter: "*" }); // ✅ Ensures all items are visible
         initIsotope.layout();
       }, 300);
     });
