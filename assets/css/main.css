@@ -19,7 +19,7 @@
 
 /* Global Colors - Updated for Dark Mode */
 :root {
-  --background-color: #121212;
+  --background-color: #000000;
   /* Dark background for the entire website */
   --default-color: #e0e0e0;
   /* Light text color for readability */
