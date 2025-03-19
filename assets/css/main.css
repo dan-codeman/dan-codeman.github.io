@@ -163,7 +163,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #1e1e1e;
+  --background-color: #060606;
   /* Darker background for header */
   --default-color: #e0e0e0;
   --heading-color: #ffffff;
@@ -657,7 +657,7 @@ section,
 }
 
 .hero .container h2 {
-  font-size: 18px;
+  font-size: 10px;
 }
 .section-title h2:after {
   content: "";
