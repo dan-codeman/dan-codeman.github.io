@@ -657,7 +657,7 @@ section,
 }
 
 .hero .container h2 {
-  font-size: 16px;
+  font-size: 18px;
 }
 .section-title h2:after {
   content: "";
@@ -1020,6 +1020,12 @@ section,
 
 .portfolio .portfolio-item {
   position: relative;
+  width: 90%;
+  /* Reduce width slightly */
+  max-width: 300px;
+  /* Set a smaller max width */
+  margin: auto;
+  /* Keep it centered */
 }
 
 .portfolio .portfolio-item .portfolio-info {
