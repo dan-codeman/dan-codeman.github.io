@@ -649,7 +649,15 @@ section,
 }
 
 .section-title h2 {
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h6 {
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
